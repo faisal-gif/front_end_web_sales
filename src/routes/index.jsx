@@ -13,10 +13,14 @@ import PaketEdit from '../views/paket/edit.jsx';
 import CustomerIndex from '../views/customer/index.jsx';
 import CustomerCreate from '../views/customer/create.jsx';
 import CustomerEdit from '../views/customer/edit.jsx';
+import RekapCustomer from "../views/customer/rekap.jsx";
+import RekapCustomerPDf from '../pdf/rekapCustomerPDF.jsx';
+
 
 //import view User
 import SalesIndex from "../views/sales/index.jsx";
 import SalesCreate from "../views/sales/create.jsx";;
+import MyDocument from "../pdf/rekapCustomerPDF.jsx";
 
 //import view User
 import LoginForm from '../views/user/login.jsx';
@@ -43,10 +47,16 @@ function RoutesIndex() {
                 <Route path="customer" element={<CustomerIndex />} />
                 <Route path="customer/create" element={<CustomerCreate />} />
                 <Route path="customer/edit/:id" element={<CustomerEdit />} />
+                <Route path="rekapPdf" element={<MyDocument />} />
+
 
                 {/* route "/sales" */}
                 <Route path="sales" element={<SalesIndex />} />
                 <Route path="sales/create" element={<SalesCreate />} />
+
+                {/* route "/rekap" */}
+                <Route path="rekap/customer" element={<RekapCustomer />} />
+                <Route path="rekap/customer/pdf" element={<RekapCustomerPDf />} />
             </Route>
         </Routes>
     )

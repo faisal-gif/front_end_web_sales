@@ -74,8 +74,6 @@ function Navbar() {
                   <li className="nav-item">
                     <Link to="/manage/paket" className="nav-link active" aria-current="page">Paket</Link>
                   </li>
-
-
                 )}
                 {user.roles === 'admin' && (
                   <li className="nav-item">
@@ -83,6 +81,12 @@ function Navbar() {
                   </li>
                 )}
 
+                {user.roles === 'admin' && (
+                  <li className="nav-item">
+                    <Link to="/manage/rekap/customer" className="nav-link" aria-current="page">Rekap Customer</Link>
+                  </li>
+                )}
+                
                 {user.roles === 'sales' && (
                   <li className="nav-item">
                     <Link to="/manage/customer" className="nav-link active" aria-current="page">Customer</Link>
